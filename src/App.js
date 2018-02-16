@@ -19,7 +19,7 @@ class App extends Component {
       }) 
     }
 
-    fuck(){
+    submit(){
       this.props.addNewItem(this.state.newItems)
       this.setState({
         newItems: ''
@@ -42,7 +42,7 @@ class App extends Component {
           <div className='new-tasks'>
             <h1> NEW TASKS </h1>
             <input value={this.state.newItems} onChange={(e) =>  this.userInput(e)} />
-            <button onClick={() => this.fuck() } disabled={!this.state.newItems} > SUBMIT </button>
+            <button onClick={() => this.submit() } disabled={!this.state.newItems} > SUBMIT </button>
 
             {test}
           </div>
